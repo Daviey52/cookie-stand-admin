@@ -14,19 +14,24 @@ const Home: NextPage = () => {
         <h1>Cookie Stand Admin</h1>
 
       </header>
-
-      <main className="">
-
-        <form className=" flex bg-green-400 my-6 w-1/2 p-2 mx-auto">
-          <h2 className="mx-auto mb-8">Create Cookie Stand</h2>
-          <input name="location" className="flex-auto pl-1 mt-8 mr-500"></input>
-          <input name="location" className="flex-auto pl-1 mt-8 mr-500"></input>
-          <input name="location" className="flex-auto pl-1 mt-8 mr-500"></input>
-          <button className="text-black-50 bg-700 px-2"> Create</button>
+      <main className="flex flex-col items-center justify-center flex-1 w-full px-20 text-center bg-green-100 mt-8">
+        <form className="bg-green-300 w-9/12 h-52 justify-center">
+          <legend className="object-top py-4">Cookie Stand Admin</legend>
+          <label className="object-left pr-4">Location</label>
+          <input className="w-11/12 "></input>
+          <div className="px-4.5">
+            <label>Minimun Customer per Hour</label>
+            <label>Maximum Customer per Hour</label>
+            <label>Average Cookie per Sale</label>
+          </div>
+          <input className="mr-50"></input>
+          <input></input>
+          <input className="ml-50"></input>
+          <button className="bg-green-500 ml-100">Create</button>
         </form>
-
-
       </main>
+
+
 
       <footer className="p-4 bg-green-500 text-black-50 mt-10">
         <h3>@2021</h3>
