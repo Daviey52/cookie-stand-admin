@@ -1,17 +1,14 @@
 import type { NextPage } from 'next'
-import Header from '../components/Header'
-import Head from '../components/Head'
-import Main from '../components/Main'
+import CookieStandAdmin from '../components/CookieStandAdmin'
+import LoginForm from '../components/LoginForm'
+import { useAuth } from '../contexts/auth'
+
 
 const Home: NextPage = () => {
-
-
+  const { user } = useAuth();
   return (
     <div>
-      <Head />
-      <Header />
-      <Main
-      />
+      {user ? <CookieStandAdmin /> : <LoginForm />}
     </div >
   )
 }
