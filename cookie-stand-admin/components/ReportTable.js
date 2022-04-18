@@ -1,8 +1,13 @@
 import React from "react";
 
+
 export default function ReportTable(props) {
+
+  console.log(props.stands, 'new')
   return (
+
     <div>
+
       <table className="w-1/2 mx-auto my-4">
         <thead>
           <tr>
@@ -49,8 +54,35 @@ export default function ReportTable(props) {
             );
 
           })}
+
+          {props.stands.map(item => {
+            console.log(item)
+            return (<tr className="odd:bg-green-300" onClick={() => props.StandList(onDelete(item.id))}>
+              <td className="pl-2 border border-gray-700"> {item.name}</td>
+              <td className="pl-2 border border-gray-700">{item.average_cookies_per_sale * 2}</td>
+              <td className="pl-2 border border-gray-700">{item.average_cookies_per_sale * 3}</td>
+              <td className="pl-2 border border-gray-700">{item.average_cookies_per_sale * 5}</td>
+              <td className="pl-2 border border-gray-700">{item.average_cookies_per_sale * 8}</td>
+              <td className="pl-2 border border-gray-700">{item.average_cookies_per_sale * 8}</td>
+              <td className="pl-2 border border-gray-700">{item.average_cookies_per_sale * 1}</td>
+              <td className="pl-2 border border-gray-700">{item.average_cookies_per_sale * 6}</td>
+              <td className="pl-2 border border-gray-700">{item.average_cookies_per_sale * 4}</td>
+              <td className="pl-2 border border-gray-700">{item.average_cookies_per_sale * 3}</td>
+              <td className="pl-2 border border-gray-700">{item.average_cookies_per_sale * 9}</td>
+              <td className="pl-2 border border-gray-700">{item.average_cookies_per_sale * 5}</td>
+              <td className="pl-2 border border-gray-700">{item.average_cookies_per_sale * 2}</td>
+              <td className="pl-2 border border-gray-700">{item.average_cookies_per_sale * 7}</td>
+              <td className="pl-2 border border-gray-700">{item.average_cookies_per_sale * 9}</td>
+              <td className="pl-2 border border-gray-700">{item.average_cookies_per_sale * 1}</td>
+
+            </tr>
+            );
+          })}
         </tbody>
+
       </table>
     </div>
   )
 }
+
+
